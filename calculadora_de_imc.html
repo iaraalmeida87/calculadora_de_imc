@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+    <h3>Esta calculadora mede o IMC de pessoas acima de 18 anos.</h3>
+        <script>
+            function pulaLinha() {
+                document.write("<br>");
+            }
+            function mostra(frase) {
+                document.write(frase);
+                pulaLinha();
+            }
+            function calculaImc(peso, altura) {
+                return peso / (altura * altura);
+            }  
+            var nome = prompt("Qual seu nome?");
+            var pesoInformado = prompt("Qual o seu peso?");
+            var alturaInformada = prompt("Qual a sua altura?");
+            var imc = calculaImc(pesoInformado, alturaInformada);
+            
+            mostra(nome + ", de acordo com seu peso e altura, o seu IMC é " + imc);
+
+            if(imc < 18.5) {
+                mostra("Segundo a OMS seu peso está abaixo do esperado.");
+            }
+            if(imc >= 18.5 && imc <= 24.9) {
+                mostra("Segundo a OMS o seu peso está dentro do ideal.");
+            }
+            if(imc >= 25 && imc <= 29.9) {
+                mostra("Segundo a OMS isso indica sobrepeso.")
+            }       
+            if(imc >= 30 && imc <= 39.9) {
+                mostra("Segundo a OMS você está obeso(a).");
+            }
+            if(imc >= 40) {
+                mostra("Segundo a OMS você está em obesidade grave.");
+            }
+        </script>
