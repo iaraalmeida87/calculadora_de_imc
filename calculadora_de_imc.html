@@ -9,7 +9,7 @@
                 pulaLinha();
             }
             function calculaImc(peso, altura) {
-                return peso / (altura * altura);
+                return Math.round(peso / (altura * altura));
             }  
             let nome = prompt("Qual seu nome?");
             let pesoInformado = prompt("Qual o seu peso?");
