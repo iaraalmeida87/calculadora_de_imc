@@ -11,10 +11,10 @@
             function calculaImc(peso, altura) {
                 return peso / (altura * altura);
             }  
-            var nome = prompt("Qual seu nome?");
-            var pesoInformado = prompt("Qual o seu peso?");
-            var alturaInformada = prompt("Qual a sua altura?");
-            var imc = calculaImc(pesoInformado, alturaInformada);
+            let nome = prompt("Qual seu nome?");
+            let pesoInformado = prompt("Qual o seu peso?");
+            let alturaInformada = prompt("Qual a sua altura?");
+            const imc = calculaImc(pesoInformado, alturaInformada);
             
             mostra(nome + ", de acordo com seu peso e altura, o seu IMC é " + imc);
 
